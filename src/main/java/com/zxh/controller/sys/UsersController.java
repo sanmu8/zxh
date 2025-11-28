@@ -47,11 +47,11 @@ public class UsersController {
             return AjaxResult.error("用户名或密码错误！");
         }
 
-        if (eqUser.getUserType().equals("1")){
+        if (!eqUser.getUserType().equals("1")){
             return AjaxResult.error("权限不足！");
         }
 
-        if (Objects.equals(eqUser.getStatus(), "1")){
+        if (!Objects.equals(eqUser.getStatus(), "0")){
             return AjaxResult.error("账户已停用，请联系管理员！");
         }
         eqUser.setToken(JwtUtil.createToken(eqUser));
@@ -78,6 +78,11 @@ public class UsersController {
     @ApiOperation("添加")
     @PostMapping("/add")
     public AjaxResult add(@RequestBody Users users){
+        QueryWrapper<Users> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("username", users.getUsername());
+        if (usersService.getOne(userQueryWrapper) != null){
+            return AjaxResult.error("用户名已注册！");
+        }
         if(usersService.save(users)){
             return AjaxResult.success();
         }else {

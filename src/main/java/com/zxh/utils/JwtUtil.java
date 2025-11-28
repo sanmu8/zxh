@@ -8,7 +8,7 @@ import java.util.Date;
 public class JwtUtil {
 
     private static long time = 1000*60*600;//
-    private static String signatrue = "zxh";
+    private static String signatrue = "zxhzxhzxhzxh";
 
     public static String createToken(Users user) {
         JwtBuilder jwtBuilder = Jwts.builder();
