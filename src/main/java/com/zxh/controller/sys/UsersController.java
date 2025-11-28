@@ -27,11 +27,26 @@ import java.util.Objects;
  */
 @Api(tags = "用户管理")
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/sys/users")
 public class UsersController {
 
     @Autowired
     UsersServiceImpl usersService;
+
+    @ApiOperation("注册")
+    @PostMapping("/register")
+    public AjaxResult register(@RequestBody Users users) {
+        QueryWrapper<Users> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.eq("username", users.getUsername());
+        if (usersService.getOne(userQueryWrapper) != null){
+            return AjaxResult.error("用户名已注册！");
+        }
+        if(usersService.save(users)){
+            return AjaxResult.success();
+        }else {
+            return AjaxResult.error("注册失败！");
+        }
+    }
 
     @ApiOperation("登录")
     @PostMapping("/login")
