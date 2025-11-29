@@ -21,8 +21,8 @@ public class Buildings implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "building_id", type = IdType.AUTO)
-    private Integer buildingId;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
 
     @ApiModelProperty("栋楼名称")
     private String buildingName;
