@@ -3,6 +3,8 @@ package com.zxh.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.zxh.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -17,7 +19,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel("栋楼")
-public class Buildings implements Serializable {
+public class Buildings extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

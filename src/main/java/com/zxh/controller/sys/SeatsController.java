@@ -23,7 +23,7 @@ import java.util.List;
  * @since 2025-11-29
  */
 @RestController
-@RequestMapping("/seats")
+@RequestMapping("/sys/seats")
 @Api(tags = "座位管理")
 public class SeatsController {
     @Autowired

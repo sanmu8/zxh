@@ -21,7 +21,7 @@ import java.util.List;
  * @since 2025-11-29
  */
 @RestController
-@RequestMapping("/rooms")
+@RequestMapping("/sys/rooms")
 @Api(tags = "自习室管理")
 public class RoomsController {
     @Autowired

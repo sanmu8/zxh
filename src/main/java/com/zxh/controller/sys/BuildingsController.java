@@ -22,7 +22,7 @@ import java.util.List;
  */
 @RestController
 @Api(tags = "栋楼管理")
-@RequestMapping("/buildings")
+@RequestMapping("/sys/buildings")
 public class BuildingsController {
 
     @Autowired
