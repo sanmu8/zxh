@@ -15,13 +15,13 @@ public class CodeGenerator {
         String username = "root";
         String password = "return.0";
         String moduleName = "sys";
-        String mapperLocation = "E:\\code\\zxh\\src\\main\\resources\\mapper\\" + moduleName;
-        String tables = "users";
+        String mapperLocation = "C:\\Users\\Admin\\Desktop\\1\\zxh\\src\\main\\resources\\mapper\\" + moduleName;
+        String tables = "seats";
         FastAutoGenerator.create(url, username, password)
                 .globalConfig(builder -> {
                     builder.author("zxh") // 设置作者
-//                            .enableSwagger() // 开启 swagger 模式
-                            .outputDir("E:\\code\\zxh\\src\\main\\java"); // 指定输出目录
+                            .enableSwagger() // 开启 swagger 模式
+                            .outputDir("C:\\Users\\Admin\\Desktop\\1\\zxh\\src\\main\\java"); // 指定输出目录
                 })
                 .dataSourceConfig(builder ->
                         builder.typeConvertHandler((globalConfig, typeRegistry, metaInfo) -> {

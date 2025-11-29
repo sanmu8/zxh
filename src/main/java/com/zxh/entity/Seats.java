@@ -19,7 +19,7 @@ import lombok.Data;
  * @since 2025-11-29
  */
 @Data
-@ApiModel(value = "Seats对象", description = "座位")
+@ApiModel("座位")
 public class Seats extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;

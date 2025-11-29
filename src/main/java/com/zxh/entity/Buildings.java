@@ -16,7 +16,7 @@ import lombok.Data;
  * @since 2025-11-29
  */
 @Data
-@ApiModel(value = "Buildings对象", description = "栋楼")
+@ApiModel("栋楼")
 public class Buildings implements Serializable {
 
     private static final long serialVersionUID = 1L;

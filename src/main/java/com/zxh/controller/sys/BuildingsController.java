@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zxh.entity.AjaxResult;
 import com.zxh.entity.Buildings;
 import com.zxh.service.impl.BuildingsServiceImpl;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ import java.util.List;
  * @since 2025-11-29
  */
 @RestController
+@Api(tags = "栋楼管理")
 @RequestMapping("/buildings")
 public class BuildingsController {
 
