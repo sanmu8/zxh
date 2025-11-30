@@ -1,6 +1,7 @@
 package com.zxh.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -43,4 +44,15 @@ public class Seats extends BaseEntity implements Serializable {
     @ApiModelProperty("状态(0-可用,1-使用中，2-维修中)")
     private Byte status;
 
+    @TableField(exist = false)
+    @ApiModelProperty("所属楼栋ID")
+    private Integer buildingId;
+
+    @TableField(exist = false)
+    @ApiModelProperty("栋楼名称")
+    private String buildingName;
+
+    @TableField(exist = false)
+    @ApiModelProperty("自习室名称")
+    private String roomName;
 }

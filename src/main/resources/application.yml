@@ -13,7 +13,7 @@ spring:
   datasource:
     username: root
     password: return.0
-    url: jdbc:mysql:///zxh?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://8.148.238.119:3306/zxh?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   web:
     resources:

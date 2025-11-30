@@ -1,6 +1,7 @@
 package com.zxh.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 
@@ -41,4 +42,8 @@ public class Rooms extends BaseEntity implements Serializable {
 
     @ApiModelProperty("自习室描述")
     private String description;
+
+    @TableField(exist = false)
+    @ApiModelProperty("栋楼名称")
+    private String buildingName;
 }
